@@ -3,6 +3,6 @@
 /// More dartdocs go here.
 library;
 
-export 'src/deepsky_protocol_v1_base.dart';
+export 'src/message.dart';
 
 // TODO: Export any libraries intended for clients of this package.

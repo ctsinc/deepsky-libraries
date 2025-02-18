@@ -1,9 +1,8 @@
 import 'dart:math';
 import 'dart:typed_data';
 
+import 'package:deepsky_core/deepsky_core.dart';
 import 'package:deepsky_protocol_v1/src/exception.dart';
-
-import 'codable.dart';
 
 /// バイト列からカウンターをパースする際に長さが期待したものではない
 class DPV1InvalidCounterLengthException extends DPV1Exception{

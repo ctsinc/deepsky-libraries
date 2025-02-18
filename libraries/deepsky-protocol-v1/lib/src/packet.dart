@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'codable.dart';
+import 'package:deepsky_core/deepsky_core.dart';
 
 /// Deepsky Protocol v1 Packet
 /// [
