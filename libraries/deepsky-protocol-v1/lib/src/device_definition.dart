@@ -1,0 +1,3 @@
+class DPV1DeviceDefinition{
+
+}

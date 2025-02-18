@@ -1,0 +1,43 @@
+{
+  protocol_v1: {
+    device_name: "Smart-Guard",
+    display_name: "スマートガード",
+    common_service: {
+      uuid: "747B5ADE-3A17-CDC0-D6F2-4B8D10CCFE0C",
+      write: "F824EE93-8CCC-EF25-0963-C205898ECB35",
+      notify: "3AEF494B-2256-AC39-E15F-D8C97CD4BDAB",
+      "commands": [
+        {
+          "name": "get-connection-devices",
+          "tag": 0x00
+        },
+        {
+          "name": "exchange-key",
+          "tag": 0x11
+        },
+        {
+          "name": "soft-request",
+          "tag": 0x14
+        },
+        {
+          "name": "send-device-id",
+          "tag": 0x20
+        },
+        {
+          "name": "install-mode",
+          "tag": 0xA0
+        }
+      ],
+      "states": [
+        {
+          "name": "connection-devices",
+          "tag": "0x01"
+        },
+        {
+          "name": "setup-mode-state",
+          "tag": "0x12"
+        }
+      ]
+    }
+  }
+}

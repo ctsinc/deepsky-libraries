@@ -1,8 +1,16 @@
 import 'dart:typed_data';
 
 import 'package:deepsky_core/deepsky_core.dart';
+import 'package:deepsky_protocol_v1/src/exception.dart';
 
 import 'packet.dart';
+
+class DPV1InvalidMessageException extends DPV1Exception{
+  DPV1InvalidMessageException() : super(
+    DPV1ErrorCodes.invalidMessage,
+    "cannot parse message"
+  );
+}
 
 /// Deepsky Protocol v1 Message
 /// メッセージはパケットの集合
@@ -36,6 +44,10 @@ class DPV1Message implements DSByteCodable{
     int offset = 0;
     while(offset < bytes.length){
       final int length = bytes[offset + 1];
+      //  長さが足りない場合は不正
+      if(offset + 2 + length > bytes.length){
+        throw DPV1InvalidMessageException();
+      }
       final packet = DPV1Packet(bytes.sublist(offset, offset + 2 + length));
       packets.add(packet);
       offset += 2 + length;

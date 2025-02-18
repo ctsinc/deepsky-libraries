@@ -9,10 +9,9 @@ abstract class DSByteEncodable{
 /// Decodable interface
 abstract class DSByteDecodable{
   /// Decode from byte array
-  void decode(Uint8List bytes){
-    throw UnimplementedError("subclass must implement this method");
-  }
+  void decode(Uint8List bytes);
 }
 
 /// DSByteCodable = DSByteEncodable + DSByteDecodable
+/// DSByteCodableはbyte配列に変換可能なオブジェクトを表す
 abstract class DSByteCodable implements DSByteEncodable, DSByteDecodable {}

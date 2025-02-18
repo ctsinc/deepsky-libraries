@@ -14,6 +14,9 @@ abstract class DPV1Exception implements Exception {
 }
 
 class DPV1ErrorCodes{
-  static const ErrorCode invalidCounterLength = 011;
+  static const ErrorCode invalidMessage = 011;
+  static const ErrorCode invalidCounterLength = 021;
 
+  static const ErrorCode invalidCommandDefinition = 101;
+  static const ErrorCode invalidServiceDefinition = 102;
 }

@@ -13,6 +13,8 @@ environment:
 dependencies:
   deepsky_core:
     path: ../deepsky-core
+  json5:
+    git: git@github.com:ctsinc/json5-dart-fork.git
 
 dev_dependencies:
   lints: ^4.0.0
