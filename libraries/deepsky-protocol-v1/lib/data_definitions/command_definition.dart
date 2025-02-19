@@ -12,8 +12,11 @@ class DPV1InvalidCommandDefinitionException extends DPV1Exception{
 /// Json5で定義されるread/write/notifyコマンド
 /// Serviceの中に定義される
 class DPV1CommandDefinition{
+  /// コマンド名
   final String name;
+  /// コマンドタグ
   final int tag;
+  /// Notifyコマンドかどうか
   final bool isNotify;
 
   DPV1CommandDefinition(this.name, this.tag, this.isNotify);

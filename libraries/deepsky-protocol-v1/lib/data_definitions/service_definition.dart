@@ -10,11 +10,18 @@ class DPV1InvalidServiceDefinitionException extends DPV1Exception{
   );
 }
 
+/// Protocol v1 BLE Service定義
 class DPV1ServiceDefinition{
+  /// サービス名
   final String name;
+  /// サービスUUID
   final String uuid;
+  /// Write Characteristic UUID
   final String write;
+  /// Notify Characteristic UUID
   final String notify;
+
+  /// コマンド定義
   final List<DPV1CommandDefinition> commands;
 
   DPV1ServiceDefinition(this.name, this.uuid, this.write, this.notify, this.commands);
