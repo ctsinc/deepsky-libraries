@@ -1,0 +1,7 @@
+builders:
+  icon_id_generator:
+    import: "package:deepsky_widget/builders/icon_id_generator.dart"
+    builder_factories: ["iconIdGenerator"]
+    build_extensions: {"lib/icons/icon_id.dart": ["lib/icons/icon_id.g.dart"]}
+    auto_apply: root_package
+    build_to: source
